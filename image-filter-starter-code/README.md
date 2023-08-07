@@ -8,6 +8,7 @@
 # Deployment screenshots
 ![DEPLOYSCREENSHOT](./deployment_screenshots/deploy-image-baolm1.PNG)
 
+![image](https://github.com/baominh03/udacity_cloud_dev_baolm1/assets/39981269/98b65fc7-a1eb-4b97-b4af-66109e8526ab)
 
 
 
