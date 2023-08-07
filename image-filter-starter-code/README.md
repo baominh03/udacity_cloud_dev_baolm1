@@ -1,3 +1,17 @@
+# How to Run
+1. `npm i`
+2. Check on local first `npm run dev`
+3. Call api `curl --location 'http://localhost:8082/filteredimage?image_url=https%3A%2F%2Fres.cloudinary.com%2Fpracticaldev%2Fimage%2Ffetch%2Fs--8FNVgaC7--%2Fc_imagga_scale%2Cf_auto%2Cfl_progressive%2Ch_420%2Cq_auto%2Cw_1000%2Fhttps%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fi%2Fjlij1lpng7zusvwjmjld.jpg'`
+4. Deploy to elastic beanstalk
+5. Check result `curl --location 'http://image-filter-starter-code-baolm1-dev.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https%3A%2F%2Fres.cloudinary.com%2Fpracticaldev%2Fimage%2Ffetch%2Fs--8FNVgaC7--%2Fc_imagga_scale%2Cf_auto%2Cfl_progressive%2Ch_420%2Cq_auto%2Cw_1000%2Fhttps%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fi%2Fjlij1lpng7zusvwjmjld.jpg'`
+
+# Deployment screenshots
+![DEPLOYSCREENSHOT](./deployment_screenshots/deploy-image-baolm1.PNG)
+
+
+
+
+# =============================================================================================================================
 # Udagram Image Filtering Microservice
 
 Udagram is a simple cloud application developed alongside the Udacity Cloud Engineering Nanodegree. It allows users to register and log into a web client, post photos to the feed, and process photos using an image filtering microservice.
