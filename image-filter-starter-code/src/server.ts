@@ -28,7 +28,27 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
   //   the filtered image file [!!TIP res.sendFile(filteredpath); might be useful]
 
   /**************************************************************************** */
-
+  app.get("/filteredimage", async (req, res) => {
+    try {
+      let { image_url } = req.query;
+      // 1. validate the image_url query
+      if (!image_url) {
+        return res.status(400).send({ message: `image_url is required from query param or invalid image_url, image_url = [${image_url}]` });
+      }
+      // 2. call filterImageFromURL(image_url) to filter the image
+      const file = await filterImageFromURL(image_url)
+      console.log(file)
+      // 3. send the resulting file in the response
+      // refer: https://knowledge.udacity.com/questions/286377
+      res.status(200).sendFile(file, function cleanUp() {
+        // 4. deletes any files on the server on finish of the response      
+        deleteLocalFiles([file]);
+      });
+    } catch (err) {
+      console.error(err);
+      res.status(500).send('Internal Server Error');
+    }
+  });
   //! END @TODO1
   
   // Root Endpoint
